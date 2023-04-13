@@ -1,0 +1,18 @@
+<div class="toc-tags">
+  <p class="toc-title">Tags</p>
+  {{ range $taxonomy, $_ := .Site.Taxonomies }}
+    {{ with $terms := $.GetTerms $taxonomy }}
+      {{ range $n, $term := $terms }}
+        {{ partial "component/tag-badge" $term.Title }}
+      {{- end }}
+    {{ end }}
+  {{ end }}
+</div>
+
+{{- if (default true (default .Site.Params.ToC .Params.ToC)) -}}
+{{ partial "component/table-of-contents" . }}
+{{- end -}}
+
+{{- if (default true (default .Site.Params.Backlinks .Params.Backlinks)) -}}
+{{ partial "component/backlinks" . }}
+{{- end -}}

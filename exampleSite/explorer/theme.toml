@@ -1,0 +1,12 @@
+name = "Explorer - Digital Garden Theme"
+license = "MIT"
+licenselink = "https://github.com/bphenriques/explorer-hugo-theme/blob/master/LICENSE"
+description = "Digital Garden Hugo theme with tag exploration"
+homepage = "https://github.com/bphenriques/explorer-hugo-theme"
+tags = ["responsive", "clean", "digital-garden", "tags", "search", "graph", "mobile"]
+features = []
+min_version = "0.85"
+
+[author]
+  name = "Bruno Henriques"
+  homepage = "https://github.com/bphenriques/"

@@ -1,0 +1,25 @@
+.copy-code-button {
+    color: #272822;
+    background-color: var(--body-font-color);
+    border-color: #272822; //
+    border: 2px solid;
+    border-radius: 0.3rem 0.3rem;
+
+    padding: 3px 8px;
+    font-size: 0.8em;
+
+    position: absolute;
+    right: 0;
+    opacity: 0.5;
+    min-width: 4rem;
+
+   &:hover {
+      cursor: pointer;
+   }
+}
+
+
+// Hugo Markdown class. This avoids pushing up the copy buttons.
+.highlight pre {
+    margin: 0;
+}

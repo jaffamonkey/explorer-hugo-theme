@@ -1,0 +1,20 @@
+<!-- Obtain all backlinks. Looks within the page's raw content -->
+{{ $backlinks := slice }}
+{{ range $other := .Site.RegularPages }}
+   {{- if (partial "util/is-backlink" (dict "First" $.Page "Second" $other)) -}}
+      {{ $backlinks = $backlinks | append . }}
+   {{ end }}
+{{ end }}
+
+<!-- Generate the HTML -->
+{{- if gt (len $backlinks) 0 -}}
+<nav class="backlinks">
+  <p class="toc-title">Mentioned In</p>
+  <ul class="item-preview-list">
+  {{- range $backlinks -}}
+    <li>{{ partial "component/item-preview" . }}</li>
+  {{- end -}}
+  </ul>
+</nav>
+{{- end -}}
+

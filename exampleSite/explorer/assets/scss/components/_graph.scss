@@ -1,0 +1,42 @@
+#graph-wrapper {
+  background: inherit; // blend with background
+  width: 100%;
+  height: 300px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nodes, .links, .labels {
+     .unfocus {
+        opacity: 0.2;
+     }
+  }
+
+  .links line {
+    transition: all 0.15s ease-out;
+    stroke: var(--graph-edge-color);
+    stroke-width: 1;
+  }
+
+  .nodes circle {
+    transition: all 0.15s ease-out;
+    cursor: pointer;
+    fill: var(--graph-node-color);
+  }
+
+  .labels text {
+    transition: all 0.15s ease-out;
+    cursor: pointer;
+    text-anchor: middle;
+    alignment-baseline: central;
+    font-size: 1rem;
+    fill: var(--graph-label-color);
+  }
+
+  .nodes [active], .labels [active] {
+    cursor: pointer;
+    fill: var(--graph-current-node-color);
+  }
+}
